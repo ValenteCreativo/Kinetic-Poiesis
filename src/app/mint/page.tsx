@@ -1,6 +1,6 @@
 'use client';
 import Head from 'next/head';
-import styles from '../Mint.module.css'; // Asegúrate de crear este archivo CSS
+import styles from '../Mint.module.css'; // Ensure this CSS file is created
 
 const MintPage: React.FC = () => {
   const handleConnectWallet = (): void => {
@@ -17,27 +17,35 @@ const MintPage: React.FC = () => {
         <title>Mint Your Video as NFT</title>
       </Head>
 
-      <div className={styles.mainContent}>
-        <h1 className={styles.mainTitle}>Mint Your Video as NFT</h1>
-        <p className={styles.description}>Upload your dance, yoga, or sports video and mint it as an NFT.</p>
+      {/* Parallax background */}
+      <div className={styles.backgroundImage}>
+        <div className={styles.parallaxLayer1}>
+          <img src="https://coral-near-warbler-359.mypinata.cloud/ipfs/QmPaGtEH16EwsopD4hBEY2wQnjLKzJRq7rnktyB67DY5J8" alt="Layer 1" className={styles.image} />
+        </div>
+        <div className={styles.parallaxLayer2}>
+          <img src="/images/layer2.png" alt="Layer 2" className={styles.image} />
+        </div>
+      </div>
 
-        {/* Simulador de carga de video */}
+      <div className={styles.mainContent}>
+        <h1 className={styles.mainTitle}>Mint Your Video as an NFT</h1>
+        <p className={styles.description}>
+          Turn your dance, yoga, or sports video into a unique NFT! 
+          Upload your creation and let your movement be immortalized on the blockchain.
+        </p>
+
+        {/* Video upload simulator */}
         <input type="file" accept="video/*" className={styles.videoUploader} />
-        
+
         <div className={styles.buttonContainer}>
           <button onClick={handleConnectWallet} className={styles.mainButton}>
-            Connect Wallet
+            Connect Your Wallet
           </button>
 
           <button onClick={handleMintVideo} className={styles.secondaryButton}>
-            Mint Video
+            Mint My Video
           </button>
         </div>
-
-        <footer className={styles.footer}>
-          <p>Explore the marketplace for your minted NFTs.</p>
-          <a href="/marketplace" className={styles.link}>Go to Marketplace</a>
-        </footer>
       </div>
     </div>
   );

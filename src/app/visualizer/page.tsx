@@ -1,16 +1,17 @@
 'use client';
 import Head from 'next/head';
 import BodyPose from '../../../components/BodyPose';
-import styles from '../BodyPose.module.css'; // Importa los estilos
+import styles from '../BodyPose.module.css'; // Import styles
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className={styles.container}> {/* Aplica el estilo del contenedor */}
+    <div className={styles.container}> {/* Apply container styles */}
       <Head>
-        <title>ML5.js Body Pose in Next.js</title>
+        <title>Kinetic Poetry - Body Pose Detection</title>
       </Head>
 
-      {/* Fondo con parallax */}
+      {/* Parallax background */}
       <div className={styles.backgroundImage}>
         <div className={styles.parallaxLayer1}>
           <img src="https://coral-near-warbler-359.mypinata.cloud/ipfs/QmPaGtEH16EwsopD4hBEY2wQnjLKzJRq7rnktyB67DY5J8" alt="Layer 1" className={styles.image} />
@@ -22,18 +23,21 @@ export default function Home() {
 
       <div className={styles.mainContent}>
         <h1 className={`${styles.mainTitle} ${styles.gradientText}`}>Body Pose Detection</h1>
-        <p className={styles.description}>Detect human body poses in real-time using ML5.js and Next.js</p>
+        <p className={styles.description}>
+          Experience the power of real-time human body pose detection with ML5.js and Next.js. 
+          Our innovative technology allows you to interact with your movements like never before.
+          <br /><br />
+          Whether you're a dancer, athlete, or simply exploring your body's capabilities, our platform provides the tools to capture and analyze your poses seamlessly.
+        </p>
 
-        {/* Coloca el componente BodyPose */}
-        <div className={styles.bodyPoseContainer}>
-          <BodyPose />
-        </div>
-
+        {/* Include the BodyPose component */}
         <div className={styles.buttonContainer}>
-          <button className={styles.mainButton}>
-            <span className={styles.buttonGlow}></span>
-            Start Detection
-          </button>
+          <Link href="/StartDetection">
+            <button className={styles.mainButton}>
+              <span className={styles.buttonGlow}></span>
+              Start Detection
+            </button>
+          </Link>
 
           <button className={styles.secondaryButton}>Learn More</button>
         </div>
@@ -41,6 +45,7 @@ export default function Home() {
 
       <footer className={styles.footer}>
         <a href="/about" className={styles.link}>About Us</a>
+        <span className={styles.footerText}> Join us in exploring the art of movement!</span>
       </footer>
     </div>
   );

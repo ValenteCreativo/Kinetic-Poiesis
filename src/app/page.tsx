@@ -46,9 +46,9 @@ export default function Home() {
 
         
         <p className={`${styles.description} text-lg sm:text-2xl max-w-2xl font-light`}>
-          Transform your movement into art. Whether dancing, practicing yoga, or
-          martial arts, your body becomes the brush to create unique kinetic
-          poetry.
+          Transform your movement into art. Whether dancing, practicing yoga, or engaging in martial arts, your body becomes the brush to create unique kinetic poetry. 
+          <br /><br />
+          **Customize Your Experience**: Adjust colors, particle durations, and more to reflect your style. Record your sessions and turn each movement into a digital masterpiece that captures the essence of your energy and creativity.
         </p>
 
         
@@ -68,16 +68,18 @@ export default function Home() {
       </div>
 
       <footer className={`${styles.footer}`}>
-  Crafted with love for art and technology.{" "}
-  <a
-    href="https://github.com/ValenteCreativo/Kinetic-Poiesis"
-    target="_blank"
-    rel="noopener noreferrer"
-    className={styles.link}
-  >
-    Open Source
-  </a>
-</footer>
+        Crafted with love for art and technology.{" "}
+        <a
+          href="https://github.com/ValenteCreativo/Kinetic-Poiesis"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.link}
+        >
+          Open Source
+        </a>
+        <br />
+        Discover how your movements can inspire and create beauty—join the kinetic art revolution!
+      </footer>
     </div>
   );
 }

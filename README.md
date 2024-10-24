@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Kinetic Poetry
 
-## Getting Started
+## Overview
 
-First, run the development server:
+Kinetic Poetry is an innovative web application designed to celebrate the beauty of movement through the power of real-time body pose detection. Utilizing **ML5.js** with **TensorFlow**, this application enables users to track their body movements seamlessly and interactively. Whether you're a dancer, athlete, or simply exploring your body's capabilities, Kinetic Poetry provides the tools to capture and analyze your poses.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Real-time Body Pose Detection**: Experience the power of human body pose tracking using ML5.js and TensorFlow
+- **Interactive Interface**: Engage with your movements like never before, and explore the art of movement in a creative and fun way
+- **NFT Minting**: Use **Bitte Wallet** to connect your account and mint your videos as NFTs on the **Mintbase.xyz** marketplace
+- **Parallax Background**: Enjoy a visually captivating interface with dynamic parallax effects
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Using the Application
 
-## Learn More
+1. **Connect Your Wallet**: Click on the "Connect Wallet" button to connect your Bitte Wallet account
+2. **Mint Your Movement**: Record your dance, yoga, or sports video and mint it as an NFT by clicking on "Mint Video"
+3. **Experience Body Pose Detection**: Click on the "Start Detection" button to engage with the body pose tracker and explore your movements in real time
 
-To learn more about Next.js, take a look at the following resources:
+## Technology Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Frontend**: Next.js, React, ML5.js, CSS Modules
+- **AI Technology**: TensorFlow.js for body pose tracking
+- **NFT Marketplace**: Mintbase.xyz integrated with Bitte Wallet for seamless NFT transactions
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Acknowledgements
 
-## Deploy on Vercel
+- ML5.js - A friendly machine learning library for the web
+- TensorFlow - A JavaScript library for training and deploying machine learning models in the browser
+- Bitte Wallet - A digital wallet for managing your NFTs and cryptocurrencies
+- Mintbase - An NFT marketplace for minting and trading your digital assets
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Contributions are welcome! Please feel free to submit a pull request or open an issue for any bugs or enhancements.
