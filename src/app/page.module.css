@@ -103,6 +103,16 @@
     opacity: 0.6;
   }
   
+  .link {
+    color: #00ffff; /* Color para el enlace */
+    text-decoration: underline; /* Subrayado */
+    transition: color 0.3s ease; /* Transición suave para el color */
+  }
+  
+  .link:hover {
+    color: #1e90ff; /* Color al pasar el mouse */
+  }
+  
   @keyframes fadeIn {
     0% {
       opacity: 0;
