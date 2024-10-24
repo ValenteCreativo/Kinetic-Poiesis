@@ -28,8 +28,8 @@ const BodyPose = () => {
         }
 
         update() {
-          this.lifespan -= 2;
-          this.size *= 0.97;
+          this.lifespan -= 1;
+          this.size *= 0.98;
         }
 
         display() {
@@ -59,12 +59,12 @@ const BodyPose = () => {
         connections = bodyPose.getSkeleton();
 
         trailColors = [
-          p.color(255, 102, 179, 150), // pink
-          p.color(102, 178, 255, 150), // blue
-          p.color(255, 178, 102, 150), // orange
-          p.color(178, 255, 102, 150), // lime
-          p.color(178, 102, 255, 150), // purple
-        ];
+            p.color(255, 158, 168, 150), // Rosado suave
+            p.color(102, 178, 255, 150), // Azul claro
+            p.color(255, 220, 102, 150), // Amarillo
+            p.color(178, 255, 102, 150), // Verde lima
+            p.color(178, 102, 255, 150), // Púrpura suave
+          ];
 
         p.background(0);
       };
