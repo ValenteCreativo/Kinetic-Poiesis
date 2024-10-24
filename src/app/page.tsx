@@ -1,100 +1,62 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+    <div className="relative flex items-center justify-center min-h-screen w-screen overflow-hidden bg-blue text-white">
+      {/* Imagen de fondo con capas parallax */}
+      <div className="absolute inset-0 z-[-1] overflow-hidden">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+          src="https://coral-near-warbler-359.mypinata.cloud/ipfs/QmPaGtEH16EwsopD4hBEY2wQnjLKzJRq7rnktyB67DY5J8"
+          alt="Kinetic Poiesis Background"
+          layout="fill"
+          objectFit="cover"
+          className="parallax-layer parallax-background opacity-80"
         />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+      </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      {/* Efecto Parallax */}
+      <div className="absolute inset-0 z-[-2]">
+        <div className="parallax-layer-1 opacity-30"></div>
+        <div className="parallax-layer-2 opacity-40"></div>
+      </div>
+
+      {/* Contenido principal */}
+      <div className="relative z-10 flex flex-col items-center gap-8 text-center p-8 sm:p-16 backdrop-blur-lg bg-opacity-20 bg-black rounded-lg shadow-2xl">
+        {/* Título principal con animación */}
+        <h1 className="text-5xl sm:text-7xl font-bold tracking-wide leading-tight animate-fadeInSlow">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00FFFF] to-[#1E90FF]">
+            Kinetic
+          </span>{" "}
+          Poiesis
+        </h1>
+
+        {/* Descripción con efecto animado suave */}
+        <p className="text-lg sm:text-2xl max-w-2xl font-light animate-flowEffect">
+          Transform your movement into art. Whether dancing, practicing yoga, or
+          martial arts, your body becomes the brush to create unique kinetic
+          poetry.
+        </p>
+
+        {/* Botón principal */}
+        <Link href="/app" passHref>
+          <button className="relative z-10 bg-gradient-to-r from-[#00FFFF] to-[#1E90FF] px-10 py-4 rounded-full text-lg font-semibold text-black hover:scale-110 transition-all duration-300 ease-in-out shadow-xl focus:ring focus:ring-[#00FFFF]">
+            Launch App
+            <span className="absolute -inset-1.5 bg-gradient-to-r from-[#00FFFF] to-[#1E90FF] blur-xl opacity-60 rounded-full animate-pulse"></span>
+          </button>
+        </Link>
+
+        {/* Botón secundario */}
+        <Link href="/mint" passHref>
+          <button className="mt-6 text-sm px-6 py-3 border border-[#00FFFF] text-[#00FFFF] rounded-full hover:bg-[#00FFFF] hover:text-black transition-all duration-300">
+            Mint Your Art
+          </button>
+        </Link>
+      </div>
+
+      {/* Footer */}
+      <footer className="absolute bottom-6 text-xs text-center opacity-60">
+        © 2024 Kinetic Poiesis. Crafted with love for art and technology.
       </footer>
     </div>
   );

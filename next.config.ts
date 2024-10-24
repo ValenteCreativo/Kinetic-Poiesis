@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    domains: ['coral-near-warbler-359.mypinata.cloud'], // Agrega aquí el dominio del cual quieres cargar imágenes
+  },
 };
 
 export default nextConfig;
