@@ -8,7 +8,7 @@ const MintPage: React.FC = () => {
   };
 
   const handleMintVideo = (): void => {
-    window.open('https://www.mintbase.xyz/contract/arrow.mintbase1.near/mint', '_blank');
+    window.open('https://www.mintbase.xyz/contract/arrow.mintbase1.near/nfts/all/0', '_blank');
   };
 
   return (

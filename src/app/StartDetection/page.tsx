@@ -13,7 +13,7 @@ const StartDetection: React.FC = () => {
       <div className={styles.mainContent}>
         <h1 className={styles.mainTitle}>Body Pose Detection</h1>
         <div className={styles.bodyPoseContainer}>
-          <BodyPose />
+         
         </div>
       </div>
     </div>
